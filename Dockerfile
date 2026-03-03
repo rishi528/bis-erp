@@ -15,6 +15,5 @@ RUN composer install --no-dev --optimize-autoloader
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html/storage
 
-EXPOSE 8080
-
-CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=$PORT"]
+EXPOSE 80
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=80"]
