@@ -12,13 +12,15 @@ class SendMail extends JsonResource
      * @param  \Illuminate\Http\Request  $request
      * @return array
      */
-    public function toArray($request)
+      public function toArray($request)
     {
         return [
-            //
-            'subject'   =>  $this->subject,
-            'message'   =>  $this->message,
-            'sentAt'    =>  $this->fired_at->diffForHumans(),
+            'subject' => $this->subject,
+            'message' => $this->message,
+            'sentAt'  => $this->fired_at
+                ? \Carbon\Carbon::parse($this->fired_at)->diffForHumans()
+                : null,
         ];
     }
 }
+
