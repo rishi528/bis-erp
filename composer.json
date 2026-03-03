@@ -29,7 +29,8 @@
         "laravel/ui": "4.x-dev",
         "laravel/vapor-cli": "2.0.x-dev",
         "laravel/vapor-core": "v2.36.0",
-        "league/csv": "9.7.0",
+        "league/csv": "^9.16",
+	"filament/actions": "^3.2.123",
         "league/flysystem-aws-s3-v3": "^3.24.0",
         "livewire/livewire": "^3.4",
         "maatwebsite/excel": "3.1.x-dev",
@@ -44,7 +45,7 @@
         "symfony/http-client": "^6.0",
         "symfony/mailgun-mailer": "^6.0",
         "symfony/postmark-mailer": "^6.0",
-        "symfony/process": "v6.4.3",
+        "symfony/process": "^6.4.14",
         "titasgailius/search-relations": "dev-master",
         "twilio/sdk": "dev-main"
     },

@@ -2,8 +2,17 @@
 @if(request()->is('/'))
     <nav class="navbar sticky bg-white w-full flex  lg:flex-row px-4 lg:px-8 pt-4 mb-0 justify-between items-center shadow">
         <div>
-            <a href="{{ url('/') }}" >
-                <img src="{{ asset('images/gego_k12.png') }}" class="inline-block mb-4" style="height:55px;" alt="GegoK12 Logo">
+            <a href="{{ url('/') }}">
+                @if(!empty($branding['logo']))
+                    <img src="{{ $branding['logo'] }}" 
+                         class="inline-block mb-4" 
+                         style="height:55px;" 
+                         alt="{{ $branding['name'] }}">
+                @else
+                    <span class="text-2xl font-bold">
+                        {{ $branding['name'] }}
+                    </span>
+                @endif
             </a>
         </div>
 

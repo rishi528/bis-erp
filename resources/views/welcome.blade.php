@@ -5,8 +5,8 @@
     <div class="bg-gray-300 pt-16 min-h-screen">
         <div class="container flex flex-col items-center mx-auto  bg-white p-8 shadow">
             <img src="{{ url('/uploads/demologo.png') }}" style="height: 150px; width: 150px;">
-            <h1 class="font-bold text-3xl mt-12">DEMO MATRIC HR. SEC. SCHOOL</h1>
-            <h2 class="font-bold text-xl">Madurai</h2>
+            <h1 class="font-bold text-3xl mt-12">BRIGHT INTERNATIONAL SCHOOL</h1>
+            <h2 class="font-bold text-xl">MIRAROAD E</h2>
            <!--  <demo-tab url="{{ url('/') }}"></demo-tab> -->
             <a href="{{ url('/login') }}"
                 class="btn bg-red-600 hover:bg-red-900 text-white font-bold tracking-wide uppercase px-5 py-3 mt-12 cursor-pointer rounded">Web

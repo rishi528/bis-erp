@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\View;
 use App\Observers\TeacherProfileObserver;
 use App\Observers\AcademicYearObserver;
 use App\Observers\StandardLinkObserver;
@@ -117,6 +118,18 @@ class AppServiceProvider extends ServiceProvider {
         }
 
         Paginator::useBootstrap();
+	// ------------------ SCHOOL BRANDING (SAFE) ------------------
+	if (!\App::runningInConsole()) {
+		$school = School::first();
+		$branding = [
+			'name' => $school->name ?? config('app.name'),
+        		'logo' => ($school && $school->logo)
+		                   ? asset('storage/'.$school->logo)
+                                   : null,
+		 ];
+		 View::share('branding', $branding);
+	}
+
     }
 
     /**
